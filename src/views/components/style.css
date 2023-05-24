@@ -1,0 +1,17 @@
+.font-circular {
+    font-family: 'Circular Std', sans-serif;
+}
+
+/* .bg-custom-color {
+    background-color: #00000;
+
+} */
+
+.center-div {
+    /* display: flex; */
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+    /* max-width: 80rem; */
+}
