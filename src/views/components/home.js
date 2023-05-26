@@ -79,7 +79,7 @@ const Body = () => {
 
         <HowItWorks />
       </div>
-      <div className="flex flex-col items-center justify-center text-center text-black m-10">
+      <div className="flex flex-col items-center justify-center text-center text-black mx-auto my-10">
         <h1 className="text-5xl font-bold mb-4">Customize Doxplore for Your Business Needs</h1>
         <p className='p-10'>
           At Synacal, we understand that each business has unique needs when it comes to managing documents and extracting valuable insights. That's why we offer customized solutions tailored to your specific requirements. Our platform seamlessly integrates with your existing workflows and systems, making implementation a breeze. Our dedicated support team ensures a smooth transition, with ongoing assistance whenever you need it.
@@ -113,15 +113,15 @@ const HomePage = () => {
         className=''
         style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Navbar />
-        <div className=" flex flex-col items-center justify-center "
-          style={{ 'height': '85vh' }}
+        <div className="h-screen flex flex-col items-center justify-center "
+        // style={{ 'height': '85vh' }}
         >
           <div
             className=" bg-cover bg-center flex flex-col items-center justify-center max-w-7xl"
 
           >
 
-            <div className="flex flex-col items-center justify-center text-center text-white m-20">
+            <div className="flex flex-col items-center justify-center text-center text-white mx-auto">
               <h1 className="text-5xl font-bold mb-4">Welcome to Doxplore!</h1>
               <p className="text-m mb-8 ">
                 Your intelligent document assistant! Doxplore is a cutting-edge AI-powered software that helps you find information from large sets of documents in no time. With its powerful machine learning algorithms, Doxplore can quickly and accurately analyze your documents, making it easy to find what you need, when you need it. Say goodbye to hours of tedious searching and get ready to explore your documents like never before with Doxplore!

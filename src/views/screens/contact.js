@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 function Form() {
     return (
         <div className="flex justify-center items-center">
-            <div className="max-w-2xl w-full  shadow-md rounded-lg px-8 py-2">
+            <div className="max-w-2xl w-full  shadow-md rounded-lg px-4 py-2">
                 {/* <h2 className="text-2xl font-bold mb-4">Contact Us</h2> */}
                 <form action="https://submit-form.com/WuI1mBS8">
                     <div className="mb-4">
@@ -88,7 +88,7 @@ const ContactUs = () => {
 
                 >
 
-                    <div className="flex flex-col items-center justify-center text-center text-white m-20">
+                    <div className="flex flex-col items-center justify-center text-center text-white mx-4 my-14" >
                         <h1 className="text-5xl font-bold mb-4">Request a Demo and Experience the Power of Doxplore in Action!</h1>
                         <p className="text-m mb-8 ">
                             Ready to witness the game-changing capabilities of Doxplore firsthand? Request a demo today and discover how our NLP-based AI chatbot builder can transform your customer interactions, streamline workflows, and elevate your business to new heights.

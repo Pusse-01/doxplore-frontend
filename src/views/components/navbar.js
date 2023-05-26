@@ -1,8 +1,16 @@
-import React from 'react';
+// import React from 'react';
+// import './style.css';
+
+// const Navbar = () => {
+import React, { useState } from 'react';
 import './style.css';
 
 const Navbar = () => {
-    const currentPath = window.location.pathname; // Get the current path
+    const [activeTab, setActiveTab] = useState('/'); // Set the initial active tab to '/'
+
+    const handleTabClick = (path) => {
+        setActiveTab(path); // Update the active tab when a tab is clicked
+    };
 
     return (
         <nav>
@@ -19,22 +27,25 @@ const Navbar = () => {
                     <div className="flex items-center space-x-4">
                         <a
                             href="/"
-                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPath === '/' ? 'text-blue-600' : ''
+                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${activeTab === '/' ? 'text-blue-600' : ''
                                 }`}
+                            onClick={() => handleTabClick('/')}
                         >
                             Home
                         </a>
                         <a
                             href="/pricing"
-                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPath === '/pricing' ? 'text-blue-600' : ''
+                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${activeTab === '/pricing' ? 'text-blue-600' : ''
                                 }`}
+                            onClick={() => handleTabClick('/pricing')}
                         >
                             Pricing
                         </a>
                         <a
                             href="/contact"
-                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPath === '/contact' ? 'text-blue-600' : ''
+                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${activeTab === '/contact' ? 'text-blue-600' : ''
                                 }`}
+                            onClick={() => handleTabClick('/contact')}
                         >
                             Contact
                         </a>

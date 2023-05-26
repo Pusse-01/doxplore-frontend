@@ -5,33 +5,70 @@ import './styles.css'
 import Footer from '../components/footer';
 import { useNavigate } from 'react-router-dom';
 
+// const ContainerWithInput = () => {
+//     const navigate = useNavigate();
+//     const handleSubmit = (event) => {
+//         event.preventDefault();
+//         // Add your submit logic here
+//         // Redirect to '/contact' page
+
+//         navigate('/contact');
+//     };
+
+//     return (
+//         <div className="flex items-center justify-center bor mt-10 "
+
+//         >
+//             <div className="p-6 bg-white bg-white rounded-3xl overflow-hidden shadow-lg container"
+//                 style={{ 'width': '900px' }}
+//             >
+//                 <h2 className="text-xl font-bold mb-4 ">Join Our Exclusive Waitlist and Enjoy a 50% Discount for the First 500 Users</h2>
+//                 <p className='text-gray-400 mb-4'>Be among the first to experience the game-changing capabilities of Doxplore at an unbeatable price! Join our exclusive waitlist today and secure your spot to receive a special 50% discount on your subscription as one of the first 500 users.</p>
+//                 <div className="flex flex-col items-center justify-center">
+//                     <form onSubmit={handleSubmit}>
+//                         <div className="relative">
+//                             <input
+//                                 type="text"
+//                                 className="rounded-full py-2 px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+//                                 placeholder="Enter your Email Address..."
+//                                 style={{ 'width': '500px' }}
+//                             />
+//                             <button
+//                                 type="submit"
+//                                 className="absolute right-0 top-0 h-8 w-8 m-1 rounded-full flex items-center justify-center text-white container"
+//                             >
+//                                 <span className="text-2xl pb-1 pl-1 text-gray-400" style={{ lineHeight: '0' }}>></span>
+//                                 <i className="fas fa-check"></i>
+//                             </button>
+//                         </div>
+//                     </form>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
 const ContainerWithInput = () => {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
         // Add your submit logic here
         // Redirect to '/contact' page
-
         navigate('/contact');
     };
 
     return (
-        <div className="flex items-center justify-center bor mt-10 "
-
-        >
-            <div className="p-6 bg-white bg-white rounded-3xl overflow-hidden shadow-lg container"
-                style={{ 'width': '900px' }}
-            >
-                <h2 className="text-xl font-bold mb-4 ">Join Our Exclusive Waitlist and Enjoy a 50% Discount for the First 500 Users</h2>
-                <p className='text-gray-400 mb-4'>Be among the first to experience the game-changing capabilities of Doxplore at an unbeatable price! Join our exclusive waitlist today and secure your spot to receive a special 50% discount on your subscription as one of the first 500 users.</p>
+        <div className="flex items-center justify-center mt-6">
+            <div className="p-6 bg-white rounded-3xl overflow-hidden shadow-lg container max-w-screen-md">
+                <h2 className="text-xl font-bold mb-4 text-center">Join Our Exclusive Waitlist and Enjoy a 50% Discount for the First 500 Users</h2>
+                <p className='text-gray-400 mb-4 text-center'>Be among the first to experience the game-changing capabilities of Doxplore at an unbeatable price! Join our exclusive waitlist today and secure your spot to receive a special 50% discount on your subscription as one of the first 500 users.</p>
                 <div className="flex flex-col items-center justify-center">
                     <form onSubmit={handleSubmit}>
                         <div className="relative">
                             <input
                                 type="text"
-                                className="rounded-full py-2 px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="rounded-full py-2 px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full md:w-80"
                                 placeholder="Enter your Email Address..."
-                                style={{ 'width': '500px' }}
                             />
                             <button
                                 type="submit"
@@ -47,7 +84,6 @@ const ContainerWithInput = () => {
         </div>
     );
 };
-
 
 
 const PricingPage = () => {
@@ -70,26 +106,22 @@ const PricingPage = () => {
                 style={{ backgroundImage: `url(${backgroundImage})` }}>
                 <Navbar />
                 <div className="flex flex-col items-center justify-center "
-                    style={{ 'height': '85vh' }}>
+                // style={{ 'height': '85vh' }}
+                >
                     <div
                         className="h-screen bg-cover bg-center flex flex-col items-center justify-center max-w-7xl"
+                    // Use responsive classes to set different heights based on screen size
+                    // className="h-screen sm:h-auto md:h-auto lg:h-auto xl:h-auto 2xl:h-auto sm:max-h-screen md:max-h-screen lg:max-h-screen xl:max-h-screen 2xl:max-h-screen"
 
                     >
 
-                        <div className="flex flex-col items-center justify-center text-center text-white m-20">
-                            <h1 className="text-3xl font-bold mb-4">Unlock the Power of Doxplore: Choose Your Path to Customer Engagement Excellence</h1>
+                        <div className="flex flex-col items-center justify-center text-center text-white mx-6 ">
+                            <h1 className="text-3xl font-bold mb-2">Unlock the Power of Doxplore: Choose Your Path to Customer Engagement Excellence</h1>
                             <p className="text-m mb-6 text-gray-300">
                                 Choose the perfect plan to unlock the full potential of Doxplore and revolutionize your customer interactions. Whether you're a small business looking for a solid foundation or an enterprise seeking unlimited possibilities, we have the right package to meet your needs.
                             </p>
                             <ContainerWithInput />
-                            {/* <div className="flex">
-                                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-4">
-                                    Free Trial
-                                </button>
-                                <button className="bg-white hover:bg-gray-100 text-blue-500 font-bold py-2 px-4 rounded">
-                                    Explore
-                                </button>
-                            </div> */}
+
                         </div>
                     </div>
 
@@ -98,20 +130,6 @@ const PricingPage = () => {
 
             </div>
             <div className="flex flex-col items-center justify-center">
-                {/* <h1 className="text-4xl font-bold text-center mb-4">Pricing</h1>
-                <p className="text-lg text-gray-800 mb-8">Join our waitlist for exclusive offers!</p> */}
-                {/* <div className="bg-white rounded-lg p-8 shadow-md">
-                    <h2 className="text-2xl font-bold mb-4">JOIN WAITLIST NOW</h2>
-                    <form>
-                        <div className="mb-4">
-                            <label htmlFor="email" className="block mb-2 font-medium text-gray-800">Email Address:</label>
-                            <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-                        </div>
-                        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">
-                            Submit
-                        </button>
-                    </form>
-                </div> */}
                 <div className="flex flex-wrap justify-center mt-8">
                     <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 px-4 mb-8">
                         <div className="bg-white rounded-lg p-8 shadow-md text-center h-full">
@@ -242,29 +260,13 @@ const PricingPage = () => {
                         <div className="flex items-center justify-center bor mt-10 "
 
                         >
-                            <div className="p-6 bg-white bg-white rounded-3xl overflow-hidden shadow-lg container"
-                                style={{ 'width': '900px' }}
+                            <div className="p-6 bg-white bg-white rounded-3xl overflow-hidden shadow-lg container max-w-screen-md"
+                            // style={{ 'width': '900px' }}
                             >
                                 <h2 className="text-xl font-bold mb-4 text-white text-center">Schedule Your Free Consultation Today</h2>
                                 <p className='text-gray-400 mb-4 text-center'>Don't let uncertainty hold you back from unlocking the full potential of Doxplore. Take advantage of our complimentary consultation to receive expert guidance and make an informed decision about the right package for your business.</p>
                                 <div className="flex flex-col items-center justify-center">
-                                    {/* <form onSubmit={handleSubmit}>
-                                        <div className="relative">
-                                            <input
-                                                type="text"
-                                                className="rounded-full py-2 px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                placeholder="Enter your Email Address..."
-                                                style={{ 'width': '500px' }}
-                                            />
-                                            <button
-                                                type="submit"
-                                                className="absolute right-0 top-0 h-8 w-8 m-1 rounded-full flex items-center justify-center text-white container"
-                                            >
-                                                <span className="text-2xl pb-1 pl-1 text-gray-400" style={{ lineHeight: '0' }}>></span>
-                                                <i className="fas fa-check"></i>
-                                            </button>
-                                        </div>
-                                    </form> */}
+
                                     <button onClick={() => openInNewTab("https://calendly.com/synacal/30min?month=2023-05")} className="bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-3xl mr-4"
                                         style={{
                                             'width': '250px'
