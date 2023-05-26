@@ -29,7 +29,7 @@ const Body = () => {
   return (
     <div className="center-div max-w-7xl mx-auto" >
 
-      <div className="flex flex-col items-center justify-center text-center text-black m-10 ">
+      <div className="flex flex-col items-center justify-center text-center text-black my-10 mx-2 ">
 
 
         <h1 className="text-4xl font-bold mb-4">Explore, Discover, and Unleash Your Data's Potential with Doxplore</h1>
@@ -121,7 +121,7 @@ const HomePage = () => {
 
           >
 
-            <div className="flex flex-col items-center justify-center text-center text-white mx-auto">
+            <div className="flex flex-col items-center justify-center text-center text-white mx-4">
               <h1 className="text-5xl font-bold mb-4">Welcome to Doxplore!</h1>
               <p className="text-m mb-8 ">
                 Your intelligent document assistant! Doxplore is a cutting-edge AI-powered software that helps you find information from large sets of documents in no time. With its powerful machine learning algorithms, Doxplore can quickly and accurately analyze your documents, making it easy to find what you need, when you need it. Say goodbye to hours of tedious searching and get ready to explore your documents like never before with Doxplore!
